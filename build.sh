@@ -16,7 +16,7 @@ KERNEL_DIR=$PWD
 IMAGE=$KERNEL_DIR/arch/arm64/boot/Image
 #IMAGE=$KERNEL_DIR/arch/arm/boot/zImage for 32 bit architecture
 DTBTOOL=$KERNEL_DIR/scripts/dtbToolCM
-TOOLCHAIN=/home/thedarkstrix_3/aos/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
+TOOLCHAIN=/home/thedarkstrix_3/aos/prebuilts/gcc/linux-x86/aarch64/aarch64-linaro-6.x/bin
 
 #Paths
 OUT_DIR=$KERNEL_DIR/out
@@ -33,7 +33,7 @@ CUR_TIME="$(date "+%H.%M.%S")"
 
 DEFCONFIG="trigon_kenzo_defconfig"
 export LOCALVERSION=~`echo $TRIGON_VER`
-export CROSS_COMPILE=$TOOLCHAIN/aarch64-linux-android-
+export CROSS_COMPILE=$TOOLCHAIN/aarch64-linux-gnu-
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER="TheDarkStrix"
